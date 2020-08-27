@@ -1,0 +1,14 @@
+#사용자가 무엇을 할지에 대해서 정의
+# QUERY : database로 부터 정보를 얻는 것 단지, 정보를 받을때만 쓰인다
+# MUTATION : 정보를 변형할때 , 서버 혹은 데이터베이스 메모리에서 정보를 바꾸는 작업
+
+type Euna {
+  name: String!
+  age: Int!
+  gender: String!
+}
+
+type Query { #사용자에게 정보를 주는 모든것들 모든 query들을 넣는다
+  #name: String! #사용자가 Query에 이름을 보내면 String을 보낸다는 설명
+  person: Euna!
+}
