@@ -2,14 +2,17 @@
 # QUERY : database로 부터 정보를 얻는 것 단지, 정보를 받을때만 쓰인다
 # MUTATION : 정보를 변형할때 , 서버 혹은 데이터베이스 메모리에서 정보를 바꾸는 작업
 
-type Person {
+type Movie {
   name: String!
-  age: Int!
-  gender: String!
   id: Int!
+  score: Int!
 }
 
 type Query { #사용자에게 정보를 주는 모든것들 모든 query들을 넣는다
-  people: [Person]!
-  person(id: Int!): Person
+  movies: [Movie]!
+  movie(id: Int!): Movie
+}
+
+type Mutation {
+  addMovie(name: String!, score: Int!): Movie!
 }
