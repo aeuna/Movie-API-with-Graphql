@@ -24,12 +24,12 @@ let movies = [
 export const getMovies = () => movies;
 
 export const getById = (id) => {
-  const filteredmovie = movies.filter((movie) => movie.id === String(id));
+  const filteredmovie = movies.filter((movie) => movie.id === id);
   return filteredmovie[0];
 };
 
 export const deleteMovie = (id) => {
-  const cleanedMovie = movies.filter((movie) => movie.id !== String(id));
+  const cleanedMovie = movies.filter((movie) => movie.id !== id);
   if (movies.length > cleanedMovie.length) {
     movies = cleanedMovie;
     return true;
