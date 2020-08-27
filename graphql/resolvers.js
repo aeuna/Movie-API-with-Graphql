@@ -1,13 +1,10 @@
 //Query 를 해결
+import { people, getById } from './db';
 
-const euna = {
-  name: 'euna',
-  age: 18,
-  gender: 'female',
-};
 const resolvers = {
   Query: {
-    person: () => euna,
+    people: () => people,
+    person: (_, { id }) => getById(id),
   },
 };
 
