@@ -1,2 +1,3 @@
-# movieql
-Movie API with Graphql
+# Apollo 2020
+
+Movie app built with React, Apollo and GraphQL
